@@ -94,7 +94,7 @@ const Hero = () => {
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.7, delay: 0.4 }}
-                        className="relative hidden lg:block"
+                        className="relative order-first lg:order-last mb-10 lg:mb-0"
                     >
                         {/* Main Image Container */}
                         <div className="relative z-10 w-full max-w-md mx-auto aspect-square rounded-[2rem] overflow-hidden border-4 border-white dark:border-qa-card shadow-2xl">
