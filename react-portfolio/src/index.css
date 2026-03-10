@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 transition-colors duration-300 font-sans;
+  }
+
+  .dark body {
+    @apply bg-qa-dark text-slate-100;
+  }
+}
+
+@layer components {
+  .qa-card {
+    @apply bg-white dark:bg-qa-card rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm transition-all duration-300 hover:shadow-md hover:border-qa-blue/50;
+  }
+
+  .qa-btn-primary {
+    @apply px-4 py-2 bg-qa-blue hover:bg-blue-700 text-white rounded-lg font-medium transition-colors duration-300 shadow-sm flex items-center gap-2;
+  }
+
+  .qa-btn-outline {
+    @apply px-4 py-2 bg-transparent border-2 border-qa-blue text-qa-blue hover:bg-qa-blue/10 dark:hover:bg-qa-blue/20 rounded-lg font-medium transition-colors duration-300 flex items-center gap-2;
+  }
+
+  .qa-badge {
+    @apply px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium border border-slate-200 dark:border-slate-700;
+  }
+}
+
+/* Custom Scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400 dark:bg-slate-600;
+}
