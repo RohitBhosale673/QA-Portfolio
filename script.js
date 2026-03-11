@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    console.log("Portfolio Version 1.0.2 Loaded");
 
     // --- Sticky Header with blur/shadow on scroll ---
     const header = document.querySelector('.header');
