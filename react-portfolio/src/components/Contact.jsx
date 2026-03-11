@@ -21,13 +21,18 @@ const Contact = () => {
         setStatus('loading');
 
         try {
-            const response = await fetch('https://formspree.io/rohitbhosale673@gmail.com', {
+            const response = await fetch('https://formspree.io/f/rohitbhosale673@gmail.com', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
                 },
                 body: JSON.stringify(formData)
             });
+
+            console.log('Formspree response status:', response.status);
+            const result = await response.json();
+            console.log('Formspree response body:', result);
 
             if (response.ok) {
                 setStatus('success');
