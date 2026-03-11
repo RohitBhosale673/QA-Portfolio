@@ -123,10 +123,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 const response = await fetch('https://formspree.io/rohitbhosale673@gmail.com', {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json'
+                        'Accept': 'application/json'
                     },
-                    body: JSON.stringify(data)
+                    body: formData
                 });
+
+                console.log('Formspree response status:', response.status);
+                const result = await response.json();
+                console.log('Formspree response body:', result);
 
                 if (response.ok) {
                     formStatus.textContent = 'Message sent successfully! Thank you.';
@@ -135,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     // Scroll to status message
                     formStatus.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 } else {
-                    formStatus.textContent = 'Oops! There was a problem. Please try again or email me directly.';
+                    formStatus.innerHTML = 'Oops! Something went wrong. Please check your inbox for an activation email from Formspree, or <a href="mailto:rohitbhosale673@gmail.com" style="text-decoration: underline; font-weight: bold;">email me directly</a>.';
                     formStatus.classList.add('error');
                 }
             } catch (error) {

@@ -21,13 +21,12 @@ const Contact = () => {
         setStatus('loading');
 
         try {
-            const response = await fetch('https://formspree.io/f/rohitbhosale673@gmail.com', {
+            const response = await fetch('https://formspree.io/rohitbhosale673@gmail.com', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 },
-                body: JSON.stringify(formData)
+                body: new FormData(e.target)
             });
 
             console.log('Formspree response status:', response.status);
@@ -123,9 +122,12 @@ const Contact = () => {
                         ) : (
                             <form className="space-y-4" onSubmit={handleSubmit}>
                                 {status === 'error' && (
-                                    <div className="p-4 bg-red-100 dark:bg-red-900/20 text-red-600 dark:text-red-400 rounded-lg flex items-center gap-3 text-sm">
-                                        <AlertCircle size={18} />
-                                        <span>Oops! Something went wrong. Please try again or use the email link.</span>
+                                    <div className="p-4 bg-red-100 dark:bg-red-900/20 text-red-600 dark:text-red-400 rounded-lg flex flex-col gap-2 text-sm">
+                                        <div className="flex items-center gap-3">
+                                            <AlertCircle size={18} />
+                                            <span>Oops! Something went wrong.</span>
+                                        </div>
+                                        <p className="ml-7">Please check your inbox for an activation email from Formspree, or <a href="mailto:rohitbhosale673@gmail.com" className="underline font-bold">click here to email me directly</a>.</p>
                                     </div>
                                 )}
                                 
