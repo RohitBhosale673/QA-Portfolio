@@ -99,4 +99,52 @@ document.addEventListener("DOMContentLoaded", () => {
         blob1.style.transform = `translate(${x * 30}px, ${y * 30}px)`;
         blob2.style.transform = `translate(${x * -40}px, ${y * -40}px)`;
     });
+
+    // --- Hire Me Form Submission ---
+    const hireMeForm = document.getElementById('hire-me-form');
+    const formStatus = document.getElementById('form-status');
+
+    if (hireMeForm) {
+        hireMeForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const submitBtn = hireMeForm.querySelector('.submit-btn');
+            const originalBtnContent = submitBtn.innerHTML;
+
+            // Loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            formStatus.className = 'status-msg'; // Clear previous status
+            formStatus.textContent = '';
+
+            const formData = new FormData(hireMeForm);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch('https://formspree.io/f/rohitbhosale673@gmail.com', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    formStatus.textContent = 'Message sent successfully! Thank you.';
+                    formStatus.classList.add('success');
+                    hireMeForm.reset();
+                    // Scroll to status message
+                    formStatus.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    formStatus.textContent = 'Oops! There was a problem. Please try again or email me directly.';
+                    formStatus.classList.add('error');
+                }
+            } catch (error) {
+                formStatus.textContent = 'Oops! There was a problem. Please try again or email me directly.';
+                formStatus.classList.add('error');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnContent;
+            }
+        });
+    }
 });
