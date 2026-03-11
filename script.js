@@ -121,14 +121,13 @@ document.addEventListener("DOMContentLoaded", () => {
             const data = Object.fromEntries(formData.entries());
 
             try {
-                const formDataToSubmit = new URLSearchParams(formData);
-                const response = await fetch('https://formspree.io/rohitbhosale673@gmail.com', {
+                const response = await fetch('https://formspree.io/f/meergedy', {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded',
+                        'Content-Type': 'application/json',
                         'Accept': 'application/json'
                     },
-                    body: formDataToSubmit
+                    body: JSON.stringify(data)
                 });
 
                 console.log('Formspree response status:', response.status);

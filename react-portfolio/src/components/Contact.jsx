@@ -21,18 +21,13 @@ const Contact = () => {
         setStatus('loading');
 
         try {
-            const formDataToSubmit = new URLSearchParams();
-            Object.entries(formData).forEach(([key, value]) => {
-                formDataToSubmit.append(key, value);
-            });
-
-            const response = await fetch('https://formspree.io/rohitbhosale673@gmail.com', {
+            const response = await fetch('https://formspree.io/f/meergedy', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 },
-                body: formDataToSubmit
+                body: JSON.stringify(formData)
             });
 
             console.log('Formspree response status:', response.status);
