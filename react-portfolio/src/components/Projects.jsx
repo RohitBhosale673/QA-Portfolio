@@ -5,17 +5,18 @@ import { ExternalLink, ShoppingCart, Landmark, CheckCircle2 } from 'lucide-react
 const Projects = () => {
     const projects = [
         {
-            title: "E-Commerce Order Management Systems Testing",
+            title: "E-Commerce Order Management System Testing",
             desc: "End-to-end quality assurance for critical e-commerce workflows ensuring seamless user journeys from cart to checkout.",
             icon: <ShoppingCart size={28} className="text-qa-blue" />,
             scope: "UI, Functional, API, Backend",
-            tools: ["Selenium WebDriver", "Java", "Postman", "SQL", "Manual Testing"],
+            tools: ["Selenium WebDriver", "Java", "POM", "TestNG", "Postman", "SQL", "Jenkins", "Cucumber (BDD)"],
             achievements: [
-                "Created comprehensive test scenarios for checkout, order processing, and returns.",
-                "Designed and executed 80+ manual test cases covering functional boundaries.",
-                "Automated critical order placement journeys using Selenium WebDriver.",
-                "Performed REST API testing for order creation and status services via Postman.",
-                "Validated backend order data integrity writing complex SQL queries."
+                "Eliminated 60% of post-UAT bugs by authoring 80+ manual test cases, catching 18 critical defects.",
+                "Cut regression time from 3 hours to <25 mins (87% reduction) via Selenium + Java POM/TestNG automation.",
+                "Achieved 100% edge-case coverage across 6 REST API endpoints using Postman assertions.",
+                "Uncovered 3 silent data integrity issues writing 15+ complex SQL queries.",
+                "Integrated test execution into Jenkins CI pipeline using Maven for automated code push runs.",
+                "Implemented BDD Cucumber scenarios for order flows with Gherkin feature files."
             ]
         },
         {
@@ -23,13 +24,13 @@ const Projects = () => {
             desc: "Rigorous security and functional testing for sensitive financial transactions and user authentication modules.",
             icon: <Landmark size={28} className="text-qa-blue" />,
             scope: "Security, UI, API, Database",
-            tools: ["Selenium", "TestNG", "API Testing", "SQL"],
+            tools: ["Selenium", "Java POM", "API Testing", "Postman", "SQL", "Git/GitHub"],
             achievements: [
-                "Tested highly sensitive banking workflows (login authentication, fund transfers).",
-                "Designed executed manual test cases for complex transaction modules.",
-                "Automated login and fund transfer scenarios leveraging TestNG annotations.",
-                "Performed robust API testing to validate payload security and transaction responses.",
-                "Verified database transaction history records using SQL joins and subqueries."
+                "Delivered zero-defect releases for high-stakes banking workflows across 2 testing cycles.",
+                "Reduced regression cycle time to under 15 minutes per run by automating core flows.",
+                "Validated 4 transaction service APIs via Postman (HTTP codes, JSON payloads, boundary inputs).",
+                "Confirmed 100% front-end to back-end data consistency using targeted SQL queries.",
+                "Maintained full version control of automation scripts on GitHub with structured branching."
             ]
         }
     ];

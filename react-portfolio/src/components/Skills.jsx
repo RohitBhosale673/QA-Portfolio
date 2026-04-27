@@ -5,29 +5,34 @@ import { FileSearch, Settings, Database, Activity, Wrench } from 'lucide-react';
 const Skills = () => {
     const skillCategories = [
         {
-            title: "Testing Methodology",
+            title: "Manual Testing",
             icon: <FileSearch size={24} className="text-qa-blue" />,
-            skills: ["Manual Testing", "Functional Testing", "Regression Testing", "Smoke Testing", "Test Case Design", "Defect Lifecycle"]
+            skills: ["SDLC/STLC", "Test Case Design", "Smoke/Sanity", "Regression", "BVA & ECP", "Bug Lifecycle", "RTM"]
         },
         {
             title: "Test Automation",
             icon: <Settings size={24} className="text-qa-blue" />,
-            skills: ["Selenium WebDriver", "TestNG", "Page Object Model (POM)", "Java"]
+            skills: ["Selenium WebDriver", "TestNG", "Cucumber (BDD)", "POM", "Maven", "XPath/CSS", "Java"]
         },
         {
-            title: "API Integration",
+            title: "API Testing",
             icon: <Activity size={24} className="text-qa-blue" />,
-            skills: ["Postman", "REST API", "HTTP Methods", "JSON Validation"]
+            skills: ["Postman", "REST APIs", "HTTP Methods", "Status Codes", "JSON/XML Validation"]
         },
         {
-            title: "Database Validation",
+            title: "Database",
             icon: <Database size={24} className="text-qa-blue" />,
-            skills: ["SQL", "Joins", "Subqueries", "Data Validation", "DDL/DML"]
+            skills: ["SQL", "Joins", "Subqueries", "DDL/DML", "Data Validation"]
         },
         {
-            title: "QA Tools & IDEs",
+            title: "Programming",
+            icon: <Activity size={24} className="text-qa-blue" />, // Same icon is fine, or we could add a new one if available
+            skills: ["Core Java", "OOP", "Exception Handling", "Collections Framework"]
+        },
+        {
+            title: "Tools & DevOps",
             icon: <Wrench size={24} className="text-qa-blue" />,
-            skills: ["Jira", "GitHub", "Eclipse", "VS Code", "Figma"]
+            skills: ["Jira", "Jenkins", "Git/GitHub", "Eclipse", "VS Code"]
         }
     ];
 

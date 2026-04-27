@@ -21,10 +21,10 @@ const About = () => {
 
                     <div className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed space-y-6 text-left md:text-center">
                         <p>
-                            I am a dedicated <strong className="text-qa-blue dark:text-qa-teal">QA Engineer</strong> with a passion for delivering flawless software experiences. My expertise bridges the gap between manual exploratory testing and robust automated frameworks, ensuring comprehensive test coverage across modern applications.
+                            I am a results-driven <strong className="text-qa-blue dark:text-qa-teal">QA Engineer</strong> with hands-on experience in both manual and automation testing across e-commerce and banking domains. My expertise lies in designing extensive test cases and automating critical user journeys using <strong className="text-slate-900 dark:text-slate-200">Selenium + Java (POM/TestNG)</strong>, while building BDD/Cucumber test suites integrated via Jenkins CI/CD pipelines.
                         </p>
                         <p>
-                            Proficient in designing intelligent test cases and tracking defects through their complete lifecycle, I leverage <strong className="text-slate-900 dark:text-slate-200">Java and Selenium WebDriver</strong> to automate critical user journeys. Beyond the UI, I validate business logic via rigorous <strong className="text-slate-900 dark:text-slate-200">REST API testing using Postman</strong> and ensure data integrity through complex <strong className="text-slate-900 dark:text-slate-200">SQL queries</strong>.
+                            Proficient in <strong className="text-slate-900 dark:text-slate-200">Postman REST API testing</strong> and <strong className="text-slate-900 dark:text-slate-200">SQL database validation</strong>, I consistently eliminate defect leakage to accelerate release velocity. I have successfully reduced regression time by up to 87% and bug-fix turnaround by 30% through precise Jira-driven defect tracking and comprehensive test coverage.
                         </p>
                     </div>
 

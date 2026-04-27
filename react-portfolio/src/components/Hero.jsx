@@ -54,7 +54,7 @@ const Hero = () => {
 
                         {/* Quick Skills */}
                         <motion.div variants={itemVariants} className="flex flex-wrap gap-2 mt-2">
-                            {['Manual Testing', 'Automation Testing', 'Java + Selenium', 'API (Postman)', 'SQL'].map(skill => (
+                            {['Manual Testing', 'Automation Testing', 'Java + Selenium', 'API (Postman)', 'BDD/Cucumber', 'SQL'].map(skill => (
                                 <span key={skill} className="qa-badge flex items-center gap-1.5">
                                     <CheckCircle2 size={14} className="text-qa-teal" /> {skill}
                                 </span>
